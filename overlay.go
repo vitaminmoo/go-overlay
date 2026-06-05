@@ -148,13 +148,15 @@ func (m *overlayManager) windowDetectionLoop(switchOutput chan<- string) {
 		}
 	}
 
-	// Event-driven if supported
+	// Event-driven if supported, otherwise poll at 1s.
 	var watchCh <-chan struct{}
+	pollInterval := 1 * time.Second
 	if watcher, ok := matcher.(WindowWatcher); ok {
 		watchCh = watcher.WatchEvents(m.ctx)
+		pollInterval = 10 * time.Second // events handle most updates
 	}
 
-	ticker := time.NewTicker(10 * time.Second)
+	ticker := time.NewTicker(pollInterval)
 	defer ticker.Stop()
 
 	refresh := func() {
