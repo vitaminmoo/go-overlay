@@ -32,12 +32,6 @@ application.
   - **KDE/KWin:** [`kdotool`](https://github.com/jinliu/kdotool)
   - **X11:** `wmctrl`, `xrandr`, `xprop`, `xrdb`
 
-> [!NOTE]
-> `go.mod` currently contains a local `replace` directive for
-> `deedles.dev/wl` pointing at a path on the author's machine. You will need to
-> remove or repoint that directive (to your own checkout of the dependency)
-> before the module will build elsewhere.
-
 ## Usage
 
 `go-overlay` is a library (package `overlay`). You implement a `Scene` — or just
