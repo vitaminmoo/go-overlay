@@ -1,7 +1,5 @@
 module github.com/vitaminmoo/go-overlay
 
-replace deedles.dev/wl => /home/vitaminmoo/repos/wl
-
 go 1.25.7
 
 require (
