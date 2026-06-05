@@ -98,4 +98,4 @@ rendering when frames exceed their time budget.
 
 ## License
 
-No license has been chosen yet. Until one is added, no usage rights are granted.
+[MIT](LICENSE)
