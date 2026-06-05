@@ -1,0 +1,8 @@
+# Serena MCP tooling
+/.serena/
+
+# Go build artifacts
+*.exe
+*.test
+*.out
+/dist/
